@@ -2,13 +2,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { Send } from "lucide-react";
@@ -19,25 +12,13 @@ const InvestorForm = () => {
   const [formData, setFormData] = useState({
     prenom: "",
     nom: "",
-    region: "",
-    adresse: "",
     telephone: "",
+    email: "",
+    region: "",
+    departement: "",
+    commune: "",
     montant: "",
   });
-
-  const investmentRanges = [
-    "Moins de 50 000 €",
-    "50 000 € - 75 000 €",
-    "75 000 € - 100 000 €",
-    "100 000 € - 130 000 €",
-    "Plus de 130 000 €",
-  ];
-
-  const regions = [
-    "Région Lyonnaise",
-    "Périphérie Parisienne",
-    "Autre région",
-  ];
 
   const handleChange = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -45,9 +26,18 @@ const InvestorForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    
+    // Vérifier qu'au moins un moyen de contact est fourni
+    if (!formData.telephone && !formData.email) {
+      toast({
+        title: "Information manquante",
+        description: "Veuillez renseigner un numéro de téléphone ou une adresse email.",
+        variant: "destructive",
+      });
+      return;
+    }
 
-    // Simulate form submission
+    setIsSubmitting(true);
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     toast({
@@ -58,9 +48,11 @@ const InvestorForm = () => {
     setFormData({
       prenom: "",
       nom: "",
-      region: "",
-      adresse: "",
       telephone: "",
+      email: "",
+      region: "",
+      departement: "",
+      commune: "",
       montant: "",
     });
     setIsSubmitting(false);
@@ -103,69 +95,80 @@ const InvestorForm = () => {
             </div>
           </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="region" className="text-base">Région recherchée *</Label>
-            <Select
-              value={formData.region}
-              onValueChange={(value) => handleChange("region", value)}
-              required
-            >
-              <SelectTrigger className="h-12 text-base">
-                <SelectValue placeholder="Sélectionnez une région" />
-              </SelectTrigger>
-              <SelectContent>
-                {regions.map((region) => (
-                  <SelectItem key={region} value={region}>
-                    {region}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-2">
+              <Label htmlFor="telephone" className="text-base">Téléphone</Label>
+              <Input
+                id="telephone"
+                type="tel"
+                value={formData.telephone}
+                onChange={(e) => handleChange("telephone", e.target.value)}
+                placeholder="06 XX XX XX XX"
+                className="h-12 text-base"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="email" className="text-base">Email</Label>
+              <Input
+                id="email"
+                type="email"
+                value={formData.email}
+                onChange={(e) => handleChange("email", e.target.value)}
+                placeholder="votre@email.com"
+                className="h-12 text-base"
+              />
+            </div>
           </div>
+          <p className="text-sm text-foreground/60 -mt-4">
+            * Renseignez au moins un moyen de contact (téléphone ou email)
+          </p>
 
-          <div className="space-y-2">
-            <Label htmlFor="adresse" className="text-base">Adresse complète *</Label>
-            <Input
-              id="adresse"
-              value={formData.adresse}
-              onChange={(e) => handleChange("adresse", e.target.value)}
-              placeholder="Votre adresse"
-              required
-              className="h-12 text-base"
-            />
-          </div>
-
-          <div className="space-y-2">
-            <Label htmlFor="telephone" className="text-base">Téléphone *</Label>
-            <Input
-              id="telephone"
-              type="tel"
-              value={formData.telephone}
-              onChange={(e) => handleChange("telephone", e.target.value)}
-              placeholder="06 XX XX XX XX"
-              required
-              className="h-12 text-base"
-            />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="space-y-2">
+              <Label htmlFor="region" className="text-base">Région *</Label>
+              <Input
+                id="region"
+                value={formData.region}
+                onChange={(e) => handleChange("region", e.target.value)}
+                placeholder="Ex: Auvergne-Rhône-Alpes"
+                required
+                className="h-12 text-base"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="departement" className="text-base">Département *</Label>
+              <Input
+                id="departement"
+                value={formData.departement}
+                onChange={(e) => handleChange("departement", e.target.value)}
+                placeholder="Ex: Rhône (69)"
+                required
+                className="h-12 text-base"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="commune" className="text-base">Commune / Lieu *</Label>
+              <Input
+                id="commune"
+                value={formData.commune}
+                onChange={(e) => handleChange("commune", e.target.value)}
+                placeholder="Ex: Lyon"
+                required
+                className="h-12 text-base"
+              />
+            </div>
           </div>
 
           <div className="space-y-2">
             <Label htmlFor="montant" className="text-base">Montant d'investissement envisagé *</Label>
-            <Select
+            <Input
+              id="montant"
               value={formData.montant}
-              onValueChange={(value) => handleChange("montant", value)}
+              onChange={(e) => handleChange("montant", e.target.value)}
+              placeholder="Ex: 100 000 €"
               required
-            >
-              <SelectTrigger className="h-12 text-base">
-                <SelectValue placeholder="Sélectionnez un montant" />
-              </SelectTrigger>
-              <SelectContent>
-                {investmentRanges.map((range) => (
-                  <SelectItem key={range} value={range}>
-                    {range}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+              className="h-12 text-base"
+            />
           </div>
 
           <Button
