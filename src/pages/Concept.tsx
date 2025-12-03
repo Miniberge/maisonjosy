@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle2, XCircle, Home, Users, Sparkles, Key, Coffee, MapPin } from "lucide-react";
+import { CheckCircle2, XCircle, Home, Users, Sparkles, Key, Coffee, MapPin, TrendingUp } from "lucide-react";
+import InvestorForm from "@/components/InvestorForm";
 import livingRoomImage from "@/assets/living-room.jpg";
 import gardenImage from "@/assets/garden-terrace.jpg";
 
@@ -190,6 +191,26 @@ const ConceptPage = () => {
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Formulaire Investisseur */}
+      <section id="formulaire-investisseur" className="py-20 bg-background">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-accent/10 flex items-center justify-center">
+              <TrendingUp className="w-8 h-8 text-accent" />
+            </div>
+            <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4 text-primary">
+              Investir avec Josy
+            </h2>
+            <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
+              Rejoignez un projet à impact humain et patrimonial. Exprimez votre intérêt ci-dessous.
+            </p>
+          </div>
+          <div className="max-w-2xl mx-auto">
+            <InvestorForm />
           </div>
         </div>
       </section>
