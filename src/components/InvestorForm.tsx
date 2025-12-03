@@ -14,9 +14,7 @@ const InvestorForm = () => {
     nom: "",
     telephone: "",
     email: "",
-    region: "",
-    departement: "",
-    commune: "",
+    localisation: "",
     montant: "",
   });
 
@@ -50,9 +48,7 @@ const InvestorForm = () => {
       nom: "",
       telephone: "",
       email: "",
-      region: "",
-      departement: "",
-      commune: "",
+      localisation: "",
       montant: "",
     });
     setIsSubmitting(false);
@@ -123,40 +119,16 @@ const InvestorForm = () => {
             * Renseignez au moins un moyen de contact (téléphone ou email)
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="space-y-2">
-              <Label htmlFor="region" className="text-base">Région *</Label>
-              <Input
-                id="region"
-                value={formData.region}
-                onChange={(e) => handleChange("region", e.target.value)}
-                placeholder="Ex: Auvergne-Rhône-Alpes"
-                required
-                className="h-12 text-base"
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="departement" className="text-base">Département *</Label>
-              <Input
-                id="departement"
-                value={formData.departement}
-                onChange={(e) => handleChange("departement", e.target.value)}
-                placeholder="Ex: Rhône (69)"
-                required
-                className="h-12 text-base"
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="commune" className="text-base">Commune / Lieu *</Label>
-              <Input
-                id="commune"
-                value={formData.commune}
-                onChange={(e) => handleChange("commune", e.target.value)}
-                placeholder="Ex: Lyon"
-                required
-                className="h-12 text-base"
-              />
-            </div>
+          <div className="space-y-2">
+            <Label htmlFor="localisation" className="text-base">Zone géographique recherchée *</Label>
+            <Input
+              id="localisation"
+              value={formData.localisation}
+              onChange={(e) => handleChange("localisation", e.target.value)}
+              placeholder="Ex: Lyon, Rhône, Auvergne-Rhône-Alpes..."
+              required
+              className="h-12 text-base"
+            />
           </div>
 
           <div className="space-y-2">
