@@ -18,7 +18,7 @@ const Header = () => {
 
   const navLinks = [
     { to: "/", label: "Accueil" },
-    { to: "/concept", label: "Notre Concept" },
+    { to: "/concept", label: "Investisseurs" },
     { to: "/maisons", label: "Nos Maisons" },
     { to: "/tarifs", label: "Tarifs" },
     { to: "/a-propos", label: "À Propos" },
