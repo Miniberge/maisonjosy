@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Home, Users, Sparkles, HandHeart, ArrowRight, CheckCircle2, Quote } from "lucide-react";
+import { Home, Users, Sparkles, HandHeart, ArrowRight, CheckCircle2 } from "lucide-react";
 import heroImage from "@/assets/hero-seniors-dining.jpg";
 import houseImage from "@/assets/house-exterior.jpg";
 
@@ -38,27 +38,6 @@ const HomePage = () => {
     { number: "2", title: "Visiter une maison", description: "Découvrir l'ambiance et rencontrer les colocataires" },
     { number: "3", title: "Rejoindre la SCI", description: "Devenir copropriétaire avec un investissement adapté" },
     { number: "4", title: "Emménager", description: "Commencer votre nouvelle vie, accompagné par Josy" },
-  ];
-
-  const testimonials = [
-    {
-      name: "Marie",
-      age: "68 ans",
-      location: "Lyon",
-      text: "Après le décès de mon mari, je me sentais perdue dans ma grande maison. Chez Josy, j'ai retrouvé une famille. Et en plus, je suis propriétaire !",
-    },
-    {
-      name: "Jean-Pierre",
-      age: "72 ans",
-      location: "Villeurbanne",
-      text: "Je cherchais une solution qui ne me fasse pas perdre mon patrimoine. Avec la SCI, mes enfants hériteront de mes parts. C'est intelligent.",
-    },
-    {
-      name: "Françoise",
-      age: "66 ans",
-      location: "Écully",
-      text: "Ce qui m'a convaincue ? La gestion déléguée. Je n'ai rien à faire, juste profiter de mes voisins formidables.",
-    },
   ];
 
   const stats = [
@@ -179,38 +158,6 @@ const HomePage = () => {
                 </h3>
                 <p className="text-foreground/70">{step.description}</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Témoignages */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4 text-primary">
-              Ils ont choisi Josy
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="hover-lift border-0 bg-card shadow-md">
-                <CardContent className="p-8">
-                  <Quote className="w-10 h-10 text-accent mb-4" />
-                  <p className="text-foreground/80 mb-6 italic">{testimonial.text}</p>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center text-accent font-display font-bold text-xl">
-                      {testimonial.name.charAt(0)}
-                    </div>
-                    <div>
-                      <p className="font-semibold text-primary">{testimonial.name}</p>
-                      <p className="text-sm text-foreground/60">
-                        {testimonial.age}, {testimonial.location}
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
             ))}
           </div>
         </div>
