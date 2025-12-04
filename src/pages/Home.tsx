@@ -248,9 +248,12 @@ const HomePage = () => {
           <h1 className="font-display font-bold text-4xl md:text-6xl lg:text-7xl mb-6 animate-fade-in">
             Concrétisez votre rêve d'habitat partagé,<br />tout en devenant propriétaire
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-white/90 animate-slide-up">
+          <p className="text-xl md:text-2xl mb-4 max-w-3xl mx-auto text-white/90 animate-slide-up">
             Josy réinvente l'habitat senior : une colocation conviviale entre copropriétaires,
             avec zéro gestion au quotidien.
+          </p>
+          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-white/80 italic animate-slide-up">
+            Investissez aujourd'hui pour vos proches, et demain pour votre avenir.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-scale-in">
             <Button
