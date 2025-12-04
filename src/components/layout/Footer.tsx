@@ -1,8 +1,14 @@
-import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <footer className="bg-primary text-primary-foreground">
@@ -22,36 +28,36 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Navigation</h4>
             <ul className="space-y-2">
               <li>
-                <Link
-                  to="/"
+                <button
+                  onClick={() => scrollToSection("accueil")}
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
                   Accueil
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  to="/concept"
+                <button
+                  onClick={() => scrollToSection("concept")}
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
                   Notre Concept
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  to="/maisons"
+                <button
+                  onClick={() => scrollToSection("maisons")}
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
                   Nos Maisons
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  to="/tarifs"
+                <button
+                  onClick={() => scrollToSection("tarifs")}
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
                   Tarifs
-                </Link>
+                </button>
               </li>
             </ul>
           </div>
@@ -61,28 +67,28 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Informations</h4>
             <ul className="space-y-2">
               <li>
-                <Link
-                  to="/a-propos"
+                <button
+                  onClick={() => scrollToSection("equipe")}
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
-                  À Propos
-                </Link>
+                  L'équipe
+                </button>
               </li>
               <li>
-                <Link
-                  to="/faq"
+                <button
+                  onClick={() => scrollToSection("faq")}
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
                   FAQ
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  to="/contact"
+                <button
+                  onClick={() => scrollToSection("contact")}
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
                   Contact
-                </Link>
+                </button>
               </li>
             </ul>
           </div>
@@ -119,24 +125,15 @@ const Footer = () => {
               © {currentYear} Josy. Tous droits réservés.
             </p>
             <div className="flex gap-6 text-sm">
-              <Link
-                to="/mentions-legales"
-                className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
-              >
+              <span className="text-primary-foreground/60">
                 Mentions légales
-              </Link>
-              <Link
-                to="/cgu"
-                className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
-              >
+              </span>
+              <span className="text-primary-foreground/60">
                 CGU
-              </Link>
-              <Link
-                to="/confidentialite"
-                className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
-              >
+              </span>
+              <span className="text-primary-foreground/60">
                 Confidentialité
-              </Link>
+              </span>
             </div>
           </div>
         </div>
