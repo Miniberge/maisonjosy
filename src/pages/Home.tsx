@@ -99,9 +99,8 @@ const HomePage = () => {
               </div>
             </div>
             <p className="text-lg text-foreground/70 mt-8">
-              Après une vie active, la retraite peut rimer avec isolement. Votre maison devient
-              trop grande, vos enfants sont loin, et les journées se ressemblent.{" "}
-              <strong className="text-primary">Il existe une autre voie.</strong>
+              Ni l'institution, ni seul à la maison ! Chez Josy nous avons opté pour{" "}
+              <strong className="text-primary">une autre voie.</strong>
             </p>
           </div>
         </div>
