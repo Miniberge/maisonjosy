@@ -45,9 +45,7 @@ import heroImage from "@/assets/hero-seniors-dining.jpg";
 import houseImage from "@/assets/house-exterior.jpg";
 import livingRoomImage from "@/assets/living-room.jpg";
 import gardenImage from "@/assets/garden-terrace.jpg";
-import sophieImage from "@/assets/team-sophie.jpg";
-import pierreImage from "@/assets/team-pierre.jpg";
-import marieImage from "@/assets/team-marie.jpg";
+import quentinImage from "@/assets/team-quentin.jpg";
 import InvestorForm from "@/components/InvestorForm";
 
 const HomePage = () => {
@@ -180,7 +178,7 @@ const HomePage = () => {
 
   const team = [
     {
-      image: pierreImage,
+      image: quentinImage,
       name: "Quentin Bergeron",
       title: "Fondateur & CEO",
       bio: "Entrepreneur en immobilier social, je fonde JOSY pour révolutionner l’habitat senior avec un modèle économique disruptif : un habitat partagé, autonome et abordable, où chacun investit dans son futur sans renoncer à son présent.",
