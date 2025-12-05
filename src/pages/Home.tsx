@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -98,13 +99,13 @@ const HomePage = () => {
       icon: Home,
       title: "Devenez copropriétaire",
       description:
-        "Investissez dans votre logement via une SCI. Pas de loyer, uniquement des charges. Votre patrimoine reste le vôtre.",
+        "Investissez dans un habitat séniors via une SCI. Pour vous ou pour un proche, pas de loyer, uniquement des charges. Votre patrimoine reste le vôtre.",
     },
     {
       icon: Users,
-      title: "Retrouvez une vie sociale",
+      title: "Une vie sociale riche",
       description:
-        "8-10 colocataires partageant les mêmes valeurs. Repas ensemble, activités, sorties... mais chacun chez soi quand il le souhaite.",
+        "Plusieurs colocataires partageant les mêmes valeurs. Repas communs, activités, sorties... mais chacun chez soi quand il le souhaite.",
     },
     {
       icon: Sparkles,
@@ -122,13 +123,13 @@ const HomePage = () => {
 
   const steps = [
     { number: "1", title: "Nous rencontrer", description: "Échange gratuit pour comprendre vos besoins" },
-    { number: "2", title: "Visiter une maison", description: "Découvrir l'ambiance et rencontrer les colocataires" },
-    { number: "3", title: "Rejoindre la SCI", description: "Devenir copropriétaire avec un investissement adapté" },
+    { number: "2", title: "Créer ou rejoindre une SCI", description: "Devenir copropriétaire avec un investissement adapté" },
+    { number: "3", title: "Visiter une maison", description: "Acheter et aménager selon vos souhaits votre maison" },
     { number: "4", title: "Emménager", description: "Commencer votre nouvelle vie, accompagné par Josy" },
   ];
 
   const stats = [
-    { value: "8-10", label: "colocataires par maison" },
+    { value: "4-10", label: "colocataires par habitat partagé" },
     { value: "75-130k€", label: "investissement copropriétaire" },
     { value: "0€", label: "de loyer pour les copropriétaires" },
   ];
@@ -136,7 +137,7 @@ const HomePage = () => {
   const comparison = [
     { aspect: "Statut", ehpad: "Hébergé", residence: "Locataire", josy: "Copropriétaire", josyHighlight: true },
     { aspect: "Autonomie", ehpad: "Perte d'autonomie", residence: "Variable", josy: "Autonome", josyHighlight: true },
-    { aspect: "Taille", ehpad: "80-100 résidents", residence: "50-200 logements", josy: "8-10 colocataires", josyHighlight: true },
+    { aspect: "Taille", ehpad: "20-100 résidents", residence: "20-50 logements", josy: "8-10 colocataires", josyHighlight: true },
     { aspect: "Coût mensuel", ehpad: "2500-4000€", residence: "1500-2500€", josy: "Charges seules", josyHighlight: true },
     { aspect: "Patrimoine", ehpad: "Non", residence: "Non", josy: "Oui (SCI)", josyHighlight: true },
   ];
@@ -144,31 +145,35 @@ const HomePage = () => {
   const sciSteps = [
     { number: "1", text: "Josy crée une SCI pour chaque maison" },
     { number: "2", text: "Vous achetez des parts de la SCI (75 000 - 130 000 €)" },
-    { number: "3", text: "Ces parts vous donnent droit à votre chambre + espaces communs" },
-    { number: "4", text: "Pas de loyer, uniquement les charges de la maison" },
-    { number: "5", text: "Vos parts sont transmissibles à vos héritiers" },
+    { number: "3", text: "La SCI achète et rénove une maison selon les besoins des copropriétaires." },
+    { number: "4", text: "Ces parts vous donnent droit à vos parties privatives + espaces communs" },
+    { number: "5", text: "Vous pouvez emménager ou loger un de vos proche gratuitement." },
+    { number: "6", text: "Les seules frais à prévoirs sont les charges de la maison" },
+    { number: "7", text: "Vos parts sont transmissibles à vos héritiers et peuvent être vendus" },
   ];
 
   const lifestyle = [
-    { icon: Home, title: "Votre chambre privée", description: "Espace personnel, meublé ou non selon vos envies" },
-    { icon: Users, title: "Salon partagé", description: "Pour les moments de convivialité" },
-    { icon: Coffee, title: "Cuisine équipée", description: "Repas en commun ou en solo, c'est vous qui décidez" },
+    { icon: Home, title: "Des parties privatives", description: "Appartement, Studio ou suite parentale privée, meublé ou non selon vos envies" },
+    { icon: Users, title: "Des espaces communs partagés", description: "Cuisine, salon, bibliothèque, salle de jeu, pour les moments de convivialité" },
+    { icon: Coffee, title: "Cuisine équipée", description: "Repas en commun, en solo, ou livré, c'est vous qui décidez" },
     { icon: Sparkles, title: "Jardin / Terrasse", description: "Profiter du beau temps ensemble" },
     { icon: Key, title: "Liberté totale", description: "Allez et venez comme vous voulez" },
-    { icon: MapPin, title: "Vos proches bienvenus", description: "Recevez famille et amis quand vous le souhaitez" },
+    { icon: MapPin, title: "Vos proches sont les bienvenus", description: "Recevez famille et amis quand vous le souhaitez" },
   ];
 
   const criteria = [
-    "Vous avez entre 60 et 80 ans",
-    "Vous êtes autonome au quotidien",
+    "Vous avez entre 50 et 80 ans",
+    "Vous ne voulez pas vieillir en institution",
     "Vous souhaitez rompre avec l'isolement",
+    "Vous disposez d'une épargne à investir",
+    "Vous souhaitez voir un proche bien vieillir",
     "Vous voulez préserver votre patrimoine",
     "Vous cherchez une solution sans contrainte de gestion",
   ];
 
   const values = [
-    { icon: Heart, title: "Humanité", description: "Chaque personne est unique." },
     { icon: Home, title: "Propriété", description: "Votre patrimoine compte." },
+    { icon: Heart, title: "Humanité", description: "Chaque personne est unique." },
     { icon: Sparkles, title: "Simplicité", description: "Zéro paperasse, zéro gestion." },
     { icon: Smile, title: "Bienveillance", description: "Une communauté soudée." },
   ];
@@ -176,11 +181,11 @@ const HomePage = () => {
   const team = [
     {
       image: sophieImage,
-      name: "Sophie Martin",
-      title: "Fondatrice & CEO",
-      bio: "Ancienne directrice de résidence senior.",
+      name: "Quentin Bergeron",
+      title: "Fondateur & CEO",
+      bio: "Entrepreneur en immobilier social, je fonde JOSY pour révolutionner l’habitat senior avec un modèle économique disruptif : un habitat partagé, autonome et abordable, où chacun investit dans son futur sans renoncer à son présent.",
     },
-    {
+    /*{
       image: pierreImage,
       name: "Pierre Durand",
       title: "Co-fondateur & COO",
@@ -191,17 +196,17 @@ const HomePage = () => {
       name: "Marie Lefebvre",
       title: "Responsable accompagnement",
       bio: "Votre interlocutrice dédiée.",
-    },
+    },*/
   ];
 
   const faqItems = [
     {
       question: "Qu'est-ce que Josy exactement ?",
-      answer: "Josy est un concept innovant d'habitat partagé pour seniors autonomes (60-80 ans). Nos résidents deviennent copropriétaires via une SCI, tout en bénéficiant d'une gestion totalement déléguée.",
+      answer: "JOSY est une solution innovante d’habitat partagé pour seniors autonomes, qui permet à des investisseurs (futurs résidents ou proches) de se regrouper en SCI pour co-acquérir un bien adapté à leurs besoins. Vous devenez copropriétaire d’un lieu conçu pour le confort, la convivialité et l’autonomie, sans vous soucier de la gestion, des travaux ou de l’administration : JOSY s’en charge de A à Z. Un modèle clé en main, sécurisé et centré sur le bien-vivre ensemble.",
     },
     {
       question: "Comment fonctionne la SCI ?",
-      answer: "Vous achetez des parts de la SCI (entre 75 000 et 130 000 €) qui vous donnent droit à votre chambre privée et à l'usage des espaces communs. Josy gère l'intégralité de la SCI.",
+      answer: "Vous achetez des parts d'une SCI (entre 75 000 et 130 000 €). Ces parts vous donnent droit à vos parties privatives et à l'usage des espaces communs. Si vous n'éprouvez pas le besoin d'intégrer l'habitat partagé dans l'immédiat, Josy s'occupe de trouver un locataire.",
     },
     {
       question: "Puis-je revendre mes parts ?",
@@ -209,11 +214,11 @@ const HomePage = () => {
     },
     {
       question: "Mes enfants peuvent-ils hériter ?",
-      answer: "Oui ! Vos parts de SCI sont transmissibles à vos héritiers comme tout bien immobilier.",
+      answer: "Oui ! Vos parts de SCI sont transmissibles à vos héritiers comme tout bien immobilier. Cependant, si vous avez plusieurs enfants, leurs pouvoir sera dilué.",
     },
     {
       question: "Quelles sont les charges mensuelles ?",
-      answer: "Les charges mensuelles (environ 500-700 €) couvrent l'entretien, les utilities et la gestion. Pas de loyer.",
+      answer: "Les charges mensuelles varient d'un habitat à l'autre. Vous pouvez cependant compter entre 500 et 700 €/mois afin de couvrir l'entretien, les charges et la gestion. Pas de loyer.",
     },
     {
       question: "Les animaux sont-ils acceptés ?",
