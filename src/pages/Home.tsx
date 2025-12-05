@@ -399,7 +399,7 @@ const HomePage = () => {
       </section>
 
       {/* Nos maisons */}
-      <section id="maisons" className="py-20 bg-warm-beige">
+      <section id="maisons" className="py-20 bg-soft-cream">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4 text-primary">
