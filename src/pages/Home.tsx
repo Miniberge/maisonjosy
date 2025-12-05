@@ -715,9 +715,10 @@ const HomePage = () => {
               L'équipe
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 place-items-center gap-8 max-w-5xl mx-auto mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
             {team.map((member, index) => (
-              <Card key={index} className="hover-lift border-0 bg-card shadow-lg overflow-hidden">
+              /*<Card key={index} className="hover-lift border-0 bg-card shadow-lg overflow-hidden">*/
+              <Card key={index} className={`hover-lift border-0 bg-card shadow-lg overflow-hidden ${team.length === 1 ? "md:col-span-3 mx-auto" : ""}`}>
                 <div className="aspect-square overflow-hidden">
                   <img
                     src={member.image}
