@@ -179,24 +179,12 @@ const HomePage = () => {
   ];
 
   const team = [
-    /*{
-      image: sophieImage,
-      name: "Quentin Bergeron",
-      title: "Fondateur & CEO",
-      bio: "Entrepreneur en immobilier social, je fonde JOSY pour révolutionner l’habitat senior avec un modèle économique disruptif : un habitat partagé, autonome et abordable, où chacun investit dans son futur sans renoncer à son présent.",
-    },*/
     {
       image: pierreImage,
       name: "Quentin Bergeron",
       title: "Fondateur & CEO",
       bio: "Entrepreneur en immobilier social, je fonde JOSY pour révolutionner l’habitat senior avec un modèle économique disruptif : un habitat partagé, autonome et abordable, où chacun investit dans son futur sans renoncer à son présent.",
     },
-    /*{
-      image: marieImage,
-      name: "Marie Lefebvre",
-      title: "Responsable accompagnement",
-      bio: "Votre interlocutrice dédiée.",
-    },*/
   ];
 
   const faqItems = [
@@ -715,10 +703,8 @@ const HomePage = () => {
               L'équipe
             </h2>
           </div>
-          <div className={`grid gap-8 max-w-5xl mx-auto mb-12 ${
-    team.length === 1
-      ? "grid-cols-1 place-items-center"
-      : "grid-cols-1 md:grid-cols-3"}`}>
+          {/*<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">*/}
+          <div className="flex justify-center max-w-md mx-auto">
             {team.map((member, index) => (
               <Card key={index} className="hover-lift border-0 bg-card shadow-lg overflow-hidden">
                 <div className="aspect-square overflow-hidden">
