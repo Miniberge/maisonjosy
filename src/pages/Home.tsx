@@ -724,7 +724,7 @@ const HomePage = () => {
               </Card>
             ))}
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mt-12">
             {values.map((value, index) => (
               <Card key={index} className="border-0 bg-card shadow-sm">
                 <CardContent className="p-4 text-center">
