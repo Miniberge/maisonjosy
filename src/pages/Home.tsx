@@ -153,7 +153,7 @@ const HomePage = () => {
   ];
 
   const lifestyle = [
-    { icon: Home, title: "Des parties privatives", description: "Appartement, Studio ou suite parentale privée, meublé ou non selon vos envies" },
+    { icon: Home, title: "Des espaces privés", description: "Appartement, Studio ou suite parentale privée, meublé ou non selon vos envies" },
     { icon: Users, title: "Des espaces communs partagés", description: "Cuisine, salon, bibliothèque, salle de jeu, pour les moments de convivialité" },
     { icon: Coffee, title: "Cuisine équipée", description: "Repas en commun, en solo, ou livré, c'est vous qui décidez" },
     { icon: Sparkles, title: "Jardin / Terrasse", description: "Profiter du beau temps ensemble" },
@@ -399,7 +399,7 @@ const HomePage = () => {
       </section>
 
       {/* Nos maisons */}
-      <section id="maisons" className="py-20 bg-background">
+      <section id="maisons" className="py-20 bg-soft-cream">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4 text-primary">
@@ -618,48 +618,10 @@ const HomePage = () => {
               </CardContent>
             </Card>
           </div>
-
-          {/* Aides */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mt-12">
-            <Card className="hover-lift border-0 bg-card shadow-md">
-              <CardContent className="p-6">
-                <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center mb-3">
-                  <HelpCircle className="w-5 h-5 text-accent" />
-                </div>
-                <h4 className="font-display text-lg font-semibold mb-2 text-primary">
-                  Aide à la Vie Partagée
-                </h4>
-                <p className="text-foreground/70 text-sm">Jusqu'à 10 000 €/an</p>
-              </CardContent>
-            </Card>
-            <Card className="hover-lift border-0 bg-card shadow-md">
-              <CardContent className="p-6">
-                <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center mb-3">
-                  <HelpCircle className="w-5 h-5 text-accent" />
-                </div>
-                <h4 className="font-display text-lg font-semibold mb-2 text-primary">
-                  Crédit immobilier senior
-                </h4>
-                <p className="text-foreground/70 text-sm">Prêts adaptés aux plus de 65 ans</p>
-              </CardContent>
-            </Card>
-            <Card className="hover-lift border-0 bg-card shadow-md">
-              <CardContent className="p-6">
-                <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center mb-3">
-                  <HelpCircle className="w-5 h-5 text-accent" />
-                </div>
-                <h4 className="font-display text-lg font-semibold mb-2 text-primary">
-                  Vente de votre bien
-                </h4>
-                <p className="text-foreground/70 text-sm">Nous vous accompagnons</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
       </section>
 
       {/* Le modèle SCI expliqué */}
-      <section className="py-20 bg-soft-cream">
+      <section id="investisseurs" className="py-20 bg-soft-cream">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4 text-primary">
@@ -696,7 +658,7 @@ const HomePage = () => {
       </section>
 
       {/* Investisseurs */}
-      <section id="investisseurs" className="py-20 bg-background">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-accent/10 flex items-center justify-center">
@@ -711,6 +673,35 @@ const HomePage = () => {
           </div>
           <div className="max-w-2xl mx-auto">
             <InvestorForm />
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="py-20 bg-background">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4 text-primary">
+              Questions fréquentes
+            </h2>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              {faqItems.map((item, index) => (
+                <AccordionItem
+                  key={index}
+                  value={`item-${index}`}
+                  className="bg-card rounded-lg shadow-sm border-0 px-6"
+                >
+                  <AccordionTrigger className="text-left font-semibold text-primary hover:text-light-teal">
+                    {item.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-foreground/70 pt-2">
+                    {item.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </div>
       </section>
@@ -758,36 +749,7 @@ const HomePage = () => {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* FAQ */}
-      <section id="faq" className="py-20 bg-background">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4 text-primary">
-              Questions fréquentes
-            </h2>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <Accordion type="single" collapsible className="space-y-4">
-              {faqItems.map((item, index) => (
-                <AccordionItem
-                  key={index}
-                  value={`item-${index}`}
-                  className="bg-card rounded-lg shadow-sm border-0 px-6"
-                >
-                  <AccordionTrigger className="text-left font-semibold text-primary hover:text-light-teal">
-                    {item.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-foreground/70 pt-2">
-                    {item.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-        </div>
-      </section>
+      </section> 
 
       {/* Contact */}
       <section id="contact" className="py-20 bg-soft-cream">
@@ -812,8 +774,9 @@ const HomePage = () => {
                         <SelectValue placeholder="Sélectionnez votre profil" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="senior">Senior intéressé</SelectItem>
-                        <SelectItem value="proche">Proche d'un senior</SelectItem>
+                        <SelectItem value="senior">Intéressé(e)</SelectItem>
+                        <SelectItem value="proche">Intéressé(e) pour un proche</SelectItem>
+                        <SelectItem value="proche">Intéressé(e) pour un proche puis pour moi</SelectItem>
                         <SelectItem value="partenaire">Partenaire potentiel</SelectItem>
                         <SelectItem value="autre">Autre</SelectItem>
                       </SelectContent>
