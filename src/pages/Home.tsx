@@ -715,10 +715,10 @@ const HomePage = () => {
               L'équipe
             </h2>
           </div>
-          <div className="grid gap-8 max-w-5xl mx-auto mb-12 ${
+          <div className={`grid gap-8 max-w-5xl mx-auto mb-12 ${
     team.length === 1
       ? "grid-cols-1 place-items-center"
-      : "grid-cols-1 md:grid-cols-3"">
+      : "grid-cols-1 md:grid-cols-3"}`}>
             {team.map((member, index) => (
               <Card key={index} className="hover-lift border-0 bg-card shadow-lg overflow-hidden">
                 <div className="aspect-square overflow-hidden">
