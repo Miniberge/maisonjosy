@@ -399,7 +399,7 @@ const HomePage = () => {
       </section>
 
       {/* Nos maisons */}
-      <section id="maisons" className="py-20 bg-soft-cream">
+      <section id="maisons" className="py-20 bg-warm-beige">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4 text-primary">
@@ -416,7 +416,7 @@ const HomePage = () => {
                   Ouverture fin 2026
                 </div>
                 <h3 className="font-display text-2xl font-semibold mb-4 text-primary">
-                  Isière (38) - Saint Sauveur
+                  Isère (38) - Saint Sauveur
                 </h3>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center gap-3">
@@ -531,7 +531,7 @@ const HomePage = () => {
       </section>
 
       {/* Tarifs */}
-      <section id="tarifs" className="py-20 bg-soft-cream">
+      <section id="tarifs" className="py-20 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4 text-primary">
