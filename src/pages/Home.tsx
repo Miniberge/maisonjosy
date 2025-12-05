@@ -618,6 +618,7 @@ const HomePage = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
       </section>
 
       {/* Le modèle SCI expliqué */}
