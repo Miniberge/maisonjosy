@@ -715,7 +715,6 @@ const HomePage = () => {
               L'équipe
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
           <div className="grid gap-8 max-w-5xl mx-auto mb-12 ${
     team.length === 1
       ? "grid-cols-1 place-items-center"
