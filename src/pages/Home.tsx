@@ -148,7 +148,7 @@ const HomePage = () => {
     { number: "3", text: "La SCI achète et rénove une maison selon les besoins des copropriétaires." },
     { number: "4", text: "Ces parts vous donnent droit à vos parties privatives + espaces communs" },
     { number: "5", text: "Vous pouvez emménager ou loger un de vos proche gratuitement." },
-    { number: "6", text: "Les seules frais à prévoirs sont les charges de la maison" },
+    { number: "6", text: "Les seuls frais à prévoirs sont les charges de la maison" },
     { number: "7", text: "Vos parts sont transmissibles à vos héritiers et peuvent être vendus" },
   ];
 
@@ -179,19 +179,19 @@ const HomePage = () => {
   ];
 
   const team = [
-    {
+    /*{
       image: sophieImage,
+      name: "Quentin Bergeron",
+      title: "Fondateur & CEO",
+      bio: "Entrepreneur en immobilier social, je fonde JOSY pour révolutionner l’habitat senior avec un modèle économique disruptif : un habitat partagé, autonome et abordable, où chacun investit dans son futur sans renoncer à son présent.",
+    },*/
+    {
+      image: pierreImage,
       name: "Quentin Bergeron",
       title: "Fondateur & CEO",
       bio: "Entrepreneur en immobilier social, je fonde JOSY pour révolutionner l’habitat senior avec un modèle économique disruptif : un habitat partagé, autonome et abordable, où chacun investit dans son futur sans renoncer à son présent.",
     },
     /*{
-      image: pierreImage,
-      name: "Pierre Durand",
-      title: "Co-fondateur & COO",
-      bio: "Expert en immobilier.",
-    },
-    {
       image: marieImage,
       name: "Marie Lefebvre",
       title: "Responsable accompagnement",
@@ -398,40 +398,68 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Le modèle SCI expliqué */}
-      <section className="py-20 bg-soft-cream">
+      {/* Nos maisons */}
+      <section id="maisons" className="py-20 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4 text-primary">
-              Comment fonctionne la copropriété ?
+              Nos habitats partagés
             </h2>
           </div>
-          <div className="max-w-4xl mx-auto mb-12">
-            {sciSteps.map((step, index) => (
-              <div key={index} className="flex gap-6 mb-8 last:mb-0">
-                <div className="flex-shrink-0 w-14 h-14 rounded-full bg-accent text-white flex items-center justify-center text-xl font-display font-bold shadow-md">
-                  {step.number}
-                </div>
-                <div className="flex-1 pt-3">
-                  <p className="text-lg text-foreground">{step.text}</p>
-                </div>
+          <Card className="max-w-5xl mx-auto hover-lift border-0 shadow-xl overflow-hidden mb-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+              <div className="h-64 lg:h-auto">
+                <img src={houseImage} alt="Maison Josy Lyon" className="w-full h-full object-cover" />
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              <CardContent className="p-8 flex flex-col justify-center">
+                <div className="inline-block bg-accent text-white px-4 py-2 rounded-full text-sm font-semibold mb-4 w-fit">
+                  Ouverture fin 2026
+                </div>
+                <h3 className="font-display text-2xl font-semibold mb-4 text-primary">
+                  Isière (38) - Saint Sauveur
+                </h3>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center gap-3">
+                    <Users className="w-5 h-5 text-accent" />
+                    <span className="text-foreground/80">8-10 colocataires</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <HomeIcon className="w-5 h-5 text-accent" />
+                    <span className="text-foreground/80">~500m², jardin privatif</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Calendar className="w-5 h-5 text-accent" />
+                    <span className="text-foreground/80">À partir de 100 000 €</span>
+                  </div>
+                </div>
+                <Button size="lg" onClick={() => scrollToSection("contact")}>
+                  Être informé
+                </Button>
+              </CardContent>
+            </div>
+          </Card>
 
-      {/* Chiffres clés */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-            {stats.map((stat, index) => (
-              <div key={index}>
-                <div className="text-5xl md:text-6xl font-display font-bold mb-3">{stat.value}</div>
-                <p className="text-xl text-primary-foreground/80">{stat.label}</p>
-              </div>
-            ))}
-          </div>
+          {/* Suggérer une ville */}
+          <Card className="max-w-2xl mx-auto border-primary/30">
+            <CardContent className="p-8">
+              <h3 className="font-display text-xl font-semibold mb-4 text-primary text-center">
+                Suggérer une ville
+              </h3>
+              <p className="text-foreground/70 mb-6 text-center text-sm">
+                Vous aimeriez qu'une maison Josy ouvre près de chez vous ?
+              </p>
+              <form onSubmit={handleSuggest} className="flex gap-4">
+                <Input
+                  type="text"
+                  placeholder="Nom de votre ville"
+                  value={suggestedCity}
+                  onChange={(e) => setSuggestedCity(e.target.value)}
+                  className="flex-1"
+                />
+                <Button type="submit">Suggérer</Button>
+              </form>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
@@ -502,71 +530,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Nos maisons */}
-      <section id="maisons" className="py-20 bg-background">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4 text-primary">
-              Nos maisons
-            </h2>
-          </div>
-          <Card className="max-w-5xl mx-auto hover-lift border-0 shadow-xl overflow-hidden mb-12">
-            <div className="grid grid-cols-1 lg:grid-cols-2">
-              <div className="h-64 lg:h-auto">
-                <img src={houseImage} alt="Maison Josy Lyon" className="w-full h-full object-cover" />
-              </div>
-              <CardContent className="p-8 flex flex-col justify-center">
-                <div className="inline-block bg-accent text-white px-4 py-2 rounded-full text-sm font-semibold mb-4 w-fit">
-                  Ouverture 2025
-                </div>
-                <h3 className="font-display text-2xl font-semibold mb-4 text-primary">
-                  Périphérie de Lyon
-                </h3>
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center gap-3">
-                    <Users className="w-5 h-5 text-accent" />
-                    <span className="text-foreground/80">8-10 colocataires</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <HomeIcon className="w-5 h-5 text-accent" />
-                    <span className="text-foreground/80">~300m², jardin privatif</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Calendar className="w-5 h-5 text-accent" />
-                    <span className="text-foreground/80">À partir de 85 000 €</span>
-                  </div>
-                </div>
-                <Button size="lg" onClick={() => scrollToSection("contact")}>
-                  Être informé
-                </Button>
-              </CardContent>
-            </div>
-          </Card>
-
-          {/* Suggérer une ville */}
-          <Card className="max-w-2xl mx-auto border-primary/30">
-            <CardContent className="p-8">
-              <h3 className="font-display text-xl font-semibold mb-4 text-primary text-center">
-                Suggérer une ville
-              </h3>
-              <p className="text-foreground/70 mb-6 text-center text-sm">
-                Vous aimeriez qu'une maison Josy ouvre près de chez vous ?
-              </p>
-              <form onSubmit={handleSuggest} className="flex gap-4">
-                <Input
-                  type="text"
-                  placeholder="Nom de votre ville"
-                  value={suggestedCity}
-                  onChange={(e) => setSuggestedCity(e.target.value)}
-                  className="flex-1"
-                />
-                <Button type="submit">Suggérer</Button>
-              </form>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
       {/* Tarifs */}
       <section id="tarifs" className="py-20 bg-soft-cream">
         <div className="container mx-auto px-4 lg:px-8">
@@ -576,6 +539,7 @@ const HomePage = () => {
             </h2>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
             {/* Option Copropriétaire */}
             <Card className="hover-lift border-2 border-accent shadow-xl">
               <CardContent className="p-8">
@@ -690,6 +654,43 @@ const HomePage = () => {
                 <p className="text-foreground/70 text-sm">Nous vous accompagnons</p>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Le modèle SCI expliqué */}
+      <section className="py-20 bg-soft-cream">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4 text-primary">
+              Comment fonctionne la copropriété ?
+            </h2>
+          </div>
+          <div className="max-w-4xl mx-auto mb-12">
+            {sciSteps.map((step, index) => (
+              <div key={index} className="flex gap-6 mb-8 last:mb-0">
+                <div className="flex-shrink-0 w-14 h-14 rounded-full bg-accent text-white flex items-center justify-center text-xl font-display font-bold shadow-md">
+                  {step.number}
+                </div>
+                <div className="flex-1 pt-3">
+                  <p className="text-lg text-foreground">{step.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Chiffres clés */}
+      <section className="py-20 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            {stats.map((stat, index) => (
+              <div key={index}>
+                <div className="text-5xl md:text-6xl font-display font-bold mb-3">{stat.value}</div>
+                <p className="text-xl text-primary-foreground/80">{stat.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
