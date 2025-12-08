@@ -188,27 +188,15 @@ const HomePage = () => {
   const faqItems = [
     {
       question: "Qu'est-ce que Josy exactement ?",
-      answer: "JOSY est une solution innovante d’habitat partagé pour seniors autonomes, qui permet à des investisseurs (futurs résidents ou proches) de se regrouper en SCI pour co-acquérir un bien adapté à leurs besoins. Vous devenez copropriétaire d’un lieu conçu pour le confort, la convivialité et l’autonomie, sans vous soucier de la gestion, des travaux ou de l’administration : JOSY s’en charge de A à Z. Un modèle clé en main, sécurisé et centré sur le bien-vivre ensemble.",
+      answer: "JOSY est une solution innovante d’habitat partagé pour seniors autonomes, qui permet à des investisseurs (futurs résidents ou proches) de se regrouper en SCI pour co-acquérir un bien adapté à leurs besoins. Vous devenez copropriétaire d’un lieu conçu pour le confort, la convivialité et l’autonomie, sans avoir à gérer les travaux, l’administration ou la maintenance : JOSY s’occupe de tout, de A à Z. Un modèle clé en main, sécurisé et centré sur le bien-vivre ensemble, pour investir dans votre futur sans sacrifier votre présent.",
     },
     {
-      question: "Comment fonctionne la SCI ?",
-      answer: "Vous achetez des parts d'une SCI (entre 75 000 et 130 000 €). Ces parts vous donnent droit à vos parties privatives et à l'usage des espaces communs. Si vous n'éprouvez pas le besoin d'intégrer l'habitat partagé dans l'immédiat, Josy s'occupe de trouver un locataire.",
+      question: "Puis-je créer une SCI avec un groupe d’amis ?",
+      answer: "Absolument ! C’est même l’une des solutions les plus simples, car les copropriétaires se connaissent déjà. Nous vous accompagnons dans toutes les démarches : création de la SCI, recherche du bien, gestion des travaux et administration. Vous n’avez qu’à nous contacter, et nous nous chargeons du reste pour que votre projet devienne réalité sans stress ni complication.",
     },
     {
-      question: "Puis-je revendre mes parts ?",
-      answer: "Vous pouvez revendre vos parts à tout moment. Josy s'occupe de trouver un nouveau copropriétaire compatible avec la communauté existante.",
-    },
-    {
-      question: "Mes enfants peuvent-ils hériter ?",
-      answer: "Oui ! Vos parts de SCI sont transmissibles à vos héritiers comme tout bien immobilier. Cependant, si vous avez plusieurs enfants, leurs pouvoir sera dilué.",
-    },
-    {
-      question: "Quelles sont les charges mensuelles ?",
-      answer: "Les charges mensuelles varient d'un habitat à l'autre. Vous pouvez cependant compter entre 500 et 700 €/mois afin de couvrir l'entretien, les charges et la gestion. Pas de loyer.",
-    },
-    {
-      question: "Les animaux sont-ils acceptés ?",
-      answer: "Oui, sous réserve de l'accord de la communauté de colocataires.",
+      question: "Pourquoi investir avec JOSY plutôt que sans JOSY ?",
+      answer: "Investir avec JOSY, c’est bénéficier de plusieurs avantages clés :<br>- Fédération d’investisseurs : Nous regroupons des profils compatibles pour créer des communautés harmonieuses.<br>- Expertise clé en main : De la recherche du bien à la gestion quotidienne, nous gérons tout pour vous.<br>- Sécurité et simplicité : Pas de soucis de travaux, de location ou d’administration – vous profitez simplement de votre investissement.<br>- Modèle économique optimisé : Des coûts maîtrisés et une rentabilité transparente, pour un projet moins cher qu’une résidence senior classique.<br><br>Avec JOSY, vous gagnez du temps, de la sérénité et un cadre de vie adapté à vos besoins.",
     },
   ];
 
