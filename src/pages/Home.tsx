@@ -454,6 +454,13 @@ const HomePage = () => {
                   onChange={(e) => setSuggestedCity(e.target.value)}
                   className="flex-1"
                 />
+                <Input
+                  type="text"
+                  placeholder="Nom de votre ville"
+                  value={suggestedCity}
+                  onChange={(e) => setSuggestedCity(e.target.value)}
+                  className="flex-1"
+                />
                 <Button type="submit">Suggérer</Button>
               </form>
             </CardContent>
@@ -864,7 +871,7 @@ const HomePage = () => {
                       <Phone className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
                       <div>
                         <p className="font-semibold text-primary">Téléphone</p>
-                        <p className="text-foreground/80">04 XX XX XX XX</p>
+                        <p className="text-foreground/80">06 20 77 05 89</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
@@ -872,7 +879,7 @@ const HomePage = () => {
                       <div>
                         <p className="font-semibold text-primary">Email</p>
                         <a href="mailto:contact@josy.fr" className="text-foreground/80 hover:text-primary">
-                          contact@josy.fr
+                          kalite.gre@outlook.fr
                         </a>
                       </div>
                     </div>
@@ -880,7 +887,7 @@ const HomePage = () => {
                       <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
                       <div>
                         <p className="font-semibold text-primary">Adresse</p>
-                        <p className="text-foreground/80">Lyon, France</p>
+                        <p className="text-foreground/80">Grenoble, France</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
