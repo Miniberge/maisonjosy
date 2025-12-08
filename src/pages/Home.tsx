@@ -196,15 +196,31 @@ const HomePage = () => {
     },
     {
       question: "Pourquoi investir avec JOSY plutôt que sans JOSY ?",
-      answer: {
-        intro: "Investir avec JOSY, c’est bénéficier de plusieurs avantages clés :",
-        list: [
-          { text: "Fédération d’investisseurs : Nous regroupons des profils compatibles pour créer des communautés harmonieuses.", bold: true },
-          { text: "Expertise clé en main : De la recherche du bien à la gestion quotidienne, nous gérons tout pour vous. Vous profitez simplement de votre investissement.", bold: true },
-          { text: "Sécurité et simplicité : Pas de soucis de travaux, de location ou d’administration.", bold: true },
-          { text: "Modèle économique optimisé : Des coûts maîtrisés et une rentabilité transparente, pour un projet moins cher qu’une résidence senior classique.", bold: true },
-        ],
-        outro: "Avec JOSY, vous gagnez du temps et un cadre de vie adapté à vos besoins.",
+      answer: "Investir avec JOSY, c’est bénéficier de plusieurs avantages clés : une fédération d’investisseurs pour regrouper des profils compatibles et créer des communautés harmonieuses. C'est aussi une expertise clé en main qui couvre tout, de la recherche du bien à la gestion quotidienne, afin que vous puissiez profiter simplement de votre investissement, une sécurité et une simplicité totales sans vous soucier des travaux, de la location ou de l’administration. Notre modèle économique optimisé, avec des coûts maîtrisés et une rentabilité transparente, vous permet de réaliser un projet moins cher qu’une résidence senior classique, tout en gagnant du temps et en profitant d’un cadre de vie adapté à vos besoins. Avec JOSY, vous gagnez du temps, de la sérénité et un cadre de vie parfaitement adapté à vos besoins.",
+    },
+    {
+      question: "Comment rejoindre une SCI avec des personnes que je ne connais pas ? Est-ce que JOSY organise tout ?",
+      answer: "Oui, JOSY s’occupe de tout pour vous permettre de rejoindre une SCI en toute sérénité, même si vous ne connaissez pas les autres membres. Nous sélectionnons des profils aux attentes et modes de vie compatibles pour garantir une communauté harmonieuse, organisons des rencontres et ateliers pour faciliter les échanges, gérons la création juridique de la SCI et les règles de vie commune, et assurons un suivi continu pour résoudre tout désaccord et maintenir une communication fluide.",
+    },
+    {
+      question: "Comment fonctionne la SCI ?",
+      answer: "Vous achetez des parts dans une SCI pour un montant compris entre 75 000 € et 130 000 € selon les projets, ce qui vous donne droit à vos espaces privatifs, ainsi qu’à l’usage des espaces communs (cuisine, salon, jardin, etc.). Si vous ne souhaitez pas intégrer l’habitat immédiatement, JOSY se charge de trouver un locataire pour votre part, assurant ainsi la rentabilité de votre investissement dès le départ.",
+    },
+    {
+      question: "Puis-je revendre mes parts ?",
+      answer: "Oui, vous pouvez revendre vos parts à tout moment. JOSY s’occupe de trouver un nouveau copropriétaire compatible avec la communauté existante, pour garantir une transition fluide et préserver l’harmonie du groupe.",
+    },
+    {
+      question: "Mes enfants peuvent ils hériter de mes parts ?",
+      answer: "Oui, vos parts de SCI sont transmissibles à vos héritiers, comme tout bien immobilier. Cependant, si vous avez plusieurs enfants, leurs droits seront dilés (chaque enfant héritera d’une fraction de vos parts). Nous pouvons vous accompagner pour anticiper cette transmission et trouver des solutions adaptées (rachat par la SCI, etc.).",
+    },
+    {
+      question: "Quelles sont les charges mensuelles si je suis copropriétaire ?",
+      answer: "Les charges mensuelles varient selon les projets, mais prévoyez un budget compris entre 500 € et 700 € par mois. Cela couvre l’entretien des espaces communs, les charges (eau, électricité, internet, etc.), ainsi que la gestion administrative assurée par JOSY. Aucun loyer supplémentaire n’est à prévoir : ces charges incluent tout le nécessaire pour un cadre de vie optimal.",
+    },
+    {
+      question: "Les animaux sont-ils acceptés ?",
+      answer: "Oui, les animaux sont les bienvenus, sous réserve de l’accord de la communauté de colocataires. Nous encourageons une discussion ouverte pour garantir le bien-être de tous, humains comme animaux !",
     },
   ];
 
