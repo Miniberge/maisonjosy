@@ -453,7 +453,7 @@ const HomePage = () => {
                   value={suggestedCity}
                   onChange={(e) => setSuggestedCity(e.target.value)}
                   className="flex-1"
-                />
+                /><br>
                 <Input
                   type="text"
                   placeholder="Nom de votre ville"
