@@ -447,21 +447,25 @@ const HomePage = () => {
                 Vous aimeriez qu'une maison Josy ouvre près de chez vous ?
               </p>
               <form onSubmit={handleSuggest} className="flex gap-4">
-                <Input
-                  type="text"
-                  placeholder="Nom de votre ville"
-                  value={suggestedCity}
-                  onChange={(e) => setSuggestedCity(e.target.value)}
-                  className="flex-1"
-                /><br>
-                <Input
-                  type="text"
-                  placeholder="Nom de votre ville"
-                  value={suggestedCity}
-                  onChange={(e) => setSuggestedCity(e.target.value)}
-                  className="flex-1"
-                />
-                <Button type="submit">Suggérer</Button>
+                <div>
+                  <Input
+                    type="text"
+                    placeholder="Nom de votre ville"
+                    value={suggestedCity}
+                    onChange={(e) => setSuggestedCity(e.target.value)}
+                    className="flex-1"
+                  />
+                </div>
+                <div>
+                  <Input
+                    type="text"
+                    placeholder="Nom de votre ville"
+                    value={suggestedCity}
+                    onChange={(e) => setSuggestedCity(e.target.value)}
+                    className="flex-1"
+                  />
+                  <Button type="submit">Suggérer</Button>
+                </div>
               </form>
             </CardContent>
           </Card>
@@ -812,13 +816,12 @@ const HomePage = () => {
                     </div>
                   </div>
                   <div>
-                    <Label htmlFor="email">Email *</Label>
+                    <Label htmlFor="email">Email</Label>
                     <Input
                       id="email"
                       type="email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      required
                     />
                   </div>
                   <div>
