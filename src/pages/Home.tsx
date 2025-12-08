@@ -196,7 +196,15 @@ const HomePage = () => {
     },
     {
       question: "Pourquoi investir avec JOSY plutôt que sans JOSY ?",
-      answer: "Investir avec JOSY, c’est bénéficier de plusieurs avantages clés :<br>- Fédération d’investisseurs : Nous regroupons des profils compatibles pour créer des communautés harmonieuses.<br>- Expertise clé en main : De la recherche du bien à la gestion quotidienne, nous gérons tout pour vous.<br>- Sécurité et simplicité : Pas de soucis de travaux, de location ou d’administration – vous profitez simplement de votre investissement.<br>- Modèle économique optimisé : Des coûts maîtrisés et une rentabilité transparente, pour un projet moins cher qu’une résidence senior classique.<br><br>Avec JOSY, vous gagnez du temps, de la sérénité et un cadre de vie adapté à vos besoins.",
+      answer: {
+        intro: "Investir avec JOSY, c’est bénéficier de plusieurs avantages clés :",
+        list: [
+          { text: "Fédération d’investisseurs : Nous regroupons des profils compatibles pour créer des communautés harmonieuses.", bold: true },
+          { text: "Expertise clé en main : De la recherche du bien à la gestion quotidienne, nous gérons tout pour vous. Vous profitez simplement de votre investissement.", bold: true },
+          { text: "Sécurité et simplicité : Pas de soucis de travaux, de location ou d’administration.", bold: true },
+          { text: "Modèle économique optimisé : Des coûts maîtrisés et une rentabilité transparente, pour un projet moins cher qu’une résidence senior classique.", bold: true },
+        ],
+        outro: "Avec JOSY, vous gagnez du temps et un cadre de vie adapté à vos besoins.",
     },
   ];
 
