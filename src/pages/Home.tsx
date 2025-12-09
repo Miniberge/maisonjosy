@@ -97,13 +97,13 @@ const HomePage = () => {
       icon: Home,
       title: "Devenez copropriétaire",
       description:
-        "Investissez dans un habitat séniors via une SCI. Pour vous ou pour un proche, pas de loyer, uniquement des charges. Votre patrimoine reste le vôtre.",
+        "Investissez dans un habitat séniors via une SCI, avec des frais limités. Votre patrimoine reste le vôtre.",
     },
     {
       icon: Users,
       title: "Une vie sociale riche",
       description:
-        "Plusieurs colocataires partageant les mêmes valeurs. Repas communs, activités, sorties... mais chacun chez soi quand il le souhaite.",
+        "Plusieurs colocataires partageant les mêmes valeurs, et des moments de vie commun, mais chacun chez soi quand il le souhaite.",
     },
     {
       icon: Sparkles,
@@ -136,7 +136,7 @@ const HomePage = () => {
     { aspect: "Statut", ehpad: "Hébergé", residence: "Locataire", josy: "Copropriétaire", josyHighlight: true },
     { aspect: "Autonomie", ehpad: "Perte d'autonomie", residence: "Variable", josy: "Autonome", josyHighlight: true },
     { aspect: "Taille", ehpad: "20-100 résidents", residence: "20-50 logements", josy: "8-10 colocataires", josyHighlight: true },
-    { aspect: "Coût mensuel", ehpad: "2500-4000€", residence: "1500-2500€", josy: "Charges seules", josyHighlight: true },
+    { aspect: "Coût mensuel", ehpad: "2500-4000€", residence: "1500-2500€", josy: "Frais de gestion et cahrges de copropriété", josyHighlight: true },
     { aspect: "Patrimoine", ehpad: "Non", residence: "Non", josy: "Oui (SCI)", josyHighlight: true },
   ];
 
