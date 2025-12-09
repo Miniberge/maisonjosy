@@ -188,7 +188,7 @@ const HomePage = () => {
   const faqItems = [
     {
       question: "Qu'est-ce que Josy exactement ?",
-      answer: "JOSY est une solution innovante d’habitat partagé pour seniors autonomes, qui permet à des investisseurs (futurs résidents ou proches) de se regrouper en SCI pour co-acquérir un bien adapté à leurs besoins. Vous devenez copropriétaire d’un lieu conçu pour le confort, la convivialité et l’autonomie, sans avoir à gérer les travaux, l’administration ou la maintenance : JOSY s’occupe de tout, de A à Z. Un modèle clé en main, sécurisé et centré sur le bien-vivre ensemble, pour investir dans votre futur sans sacrifier votre présent.",
+      answer: "JOSY est une solution innovante d’habitat partagé pour seniors autonomes, qui permet à des investisseurs (futurs résidents ou proches) de se regrouper en Société Civile Immobilière (SCI) pour co-acquérir un bien adapté à leurs besoins. Vous devenez copropriétaire d’un lieu conçu pour le confort, la convivialité et l’autonomie, sans avoir à gérer les travaux, l’administration ou la maintenance : JOSY s’occupe de tout, de A à Z. Un modèle clé en main, sécurisé et centré sur le bien-vivre ensemble, pour investir dans votre futur sans sacrifier votre présent.",
     },
     {
       question: "Puis-je créer une SCI avec un groupe d’amis ?",
@@ -212,10 +212,10 @@ const HomePage = () => {
     },
     {
       question: "Mes enfants peuvent ils hériter de mes parts ?",
-      answer: "Oui, vos parts de SCI sont transmissibles à vos héritiers, comme tout bien immobilier. Cependant, si vous avez plusieurs enfants, leurs droits seront dilés (chaque enfant héritera d’une fraction de vos parts). Nous pouvons vous accompagner pour anticiper cette transmission et trouver des solutions adaptées (rachat par la SCI, etc.).",
+      answer: "Oui, vos parts de SCI sont transmissibles à vos héritiers, comme tout bien immobilier. Cependant, si vous avez plusieurs enfants, leurs droits seront dilués (chaque enfant héritera d’une fraction de vos parts). Nous pouvons vous accompagner pour anticiper cette transmission et trouver des solutions adaptées (rachat par la SCI, etc.).",
     },
     {
-      question: "Quelles sont les charges mensuelles si je suis copropriétaire ?",
+      question: "Quelles sont les charges mensuelles si je suis copropriétaire&nbsp?",
       answer: "Les charges mensuelles varient selon les projets, mais prévoyez un budget compris entre 500 € et 700 € par mois. Cela couvre l’entretien des espaces communs, les charges (eau, électricité, internet, etc.), ainsi que la gestion administrative assurée par JOSY. Aucun loyer supplémentaire n’est à prévoir : ces charges incluent tout le nécessaire pour un cadre de vie optimal.",
     },
     {
@@ -447,25 +447,14 @@ const HomePage = () => {
                 Vous aimeriez qu'une maison Josy ouvre près de chez vous ?
               </p>
               <form onSubmit={handleSuggest} className="flex gap-4">
-                <div>
-                  <Input
-                    type="text"
-                    placeholder="Nom de votre ville"
-                    value={suggestedCity}
-                    onChange={(e) => setSuggestedCity(e.target.value)}
-                    className="flex-1"
-                  />
-                </div>
-                <div>
-                  <Input
-                    type="text"
-                    placeholder="Nom de votre ville"
-                    value={suggestedCity}
-                    onChange={(e) => setSuggestedCity(e.target.value)}
-                    className="flex-1"
-                  />
-                  <Button type="submit">Suggérer</Button>
-                </div>
+                <Input
+                  type="text"
+                  placeholder="Nom de votre ville"
+                  value={suggestedCity}
+                  onChange={(e) => setSuggestedCity(e.target.value)}
+                  className="flex-1"
+                />
+                <Button type="submit">Suggérer</Button>
               </form>
             </CardContent>
           </Card>
@@ -785,10 +774,8 @@ const HomePage = () => {
                         <SelectValue placeholder="Sélectionnez votre profil" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="senior">Intéressé(e)</SelectItem>
-                        <SelectItem value="proche">Intéressé(e) pour un proche</SelectItem>
-                        <SelectItem value="proche">Intéressé(e) pour un proche puis pour moi</SelectItem>
-                        <SelectItem value="partenaire">Partenaire potentiel</SelectItem>
+                        <SelectItem value="senior">Je souhaite intégrer une maison</SelectItem>
+                        <SelectItem value="investisseur">Je souhaite investir</SelectItem>
                         <SelectItem value="autre">Autre</SelectItem>
                       </SelectContent>
                     </Select>
