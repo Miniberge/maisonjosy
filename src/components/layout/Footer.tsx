@@ -71,7 +71,7 @@ const Footer = () => {
                   onClick={() => scrollToSection("investisseurs")}
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
-                  L'équipe
+                  Investisseurs
                 </button>
               </li>
               <li>
