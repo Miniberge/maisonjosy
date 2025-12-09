@@ -68,6 +68,14 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <button
+                  onClick={() => scrollToSection("investisseurs")}
+                  className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                >
+                  L'équipe
+                </button>
+              </li>
+              <li>
+                <button
                   onClick={() => scrollToSection("equipe")}
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
@@ -99,7 +107,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
                 <Phone size={20} className="mt-1 flex-shrink-0" />
-                <span className="text-primary-foreground/80">04 XX XX XX XX</span>
+                <span className="text-primary-foreground/80">06 20 77 05 89</span>
               </li>
               <li className="flex items-start gap-2">
                 <Mail size={20} className="mt-1 flex-shrink-0" />
@@ -107,13 +115,15 @@ const Footer = () => {
                   href="mailto:contact@josy.fr"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
-                  contact@josy.fr
+                  kalite.gre@outlook.fr
                 </a>
               </li>
+              {/*
               <li className="flex items-start gap-2">
                 <MapPin size={20} className="mt-1 flex-shrink-0" />
                 <span className="text-primary-foreground/80">Lyon, France</span>
               </li>
+              */}
             </ul>
           </div>
         </div>
