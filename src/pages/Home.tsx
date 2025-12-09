@@ -122,7 +122,7 @@ const HomePage = () => {
   const steps = [
     { number: "1", title: "Nous rencontrer", description: "Échange gratuit pour comprendre vos besoins" },
     { number: "2", title: "Créer ou rejoindre une SCI", description: "Devenir copropriétaire avec un investissement adapté" },
-    { number: "3", title: "Visiter une maison", description: "Acheter et aménager selon vos souhaits votre maison" },
+    { number: "3", title: "Visiter un bien", description: "Acheter et aménager selon vos souhaits votre espace" },
     { number: "4", title: "Emménager", description: "Commencer votre nouvelle vie, accompagné par Josy" },
   ];
 
@@ -136,7 +136,7 @@ const HomePage = () => {
     { aspect: "Statut", ehpad: "Hébergé", residence: "Locataire", josy: "Copropriétaire", josyHighlight: true },
     { aspect: "Autonomie", ehpad: "Perte d'autonomie", residence: "Variable", josy: "Autonome", josyHighlight: true },
     { aspect: "Taille", ehpad: "20-100 résidents", residence: "20-50 logements", josy: "8-10 colocataires", josyHighlight: true },
-    { aspect: "Coût mensuel", ehpad: "2500-4000€", residence: "1500-2500€", josy: "Frais de gestion et cahrges de copropriété", josyHighlight: true },
+    { aspect: "Coût mensuel", ehpad: "2500-4000€", residence: "1500-2500€", josy: "Frais et charges uniquement", josyHighlight: true },
     { aspect: "Patrimoine", ehpad: "Non", residence: "Non", josy: "Oui (SCI)", josyHighlight: true },
   ];
 
@@ -201,6 +201,14 @@ const HomePage = () => {
     {
       question: "Comment rejoindre une SCI avec des personnes que je ne connais pas ? Est-ce que JOSY organise tout ?",
       answer: "Oui, JOSY s’occupe de tout pour vous permettre de rejoindre une SCI en toute sérénité, même si vous ne connaissez pas les autres membres. Nous sélectionnons des profils aux attentes et modes de vie compatibles pour garantir une communauté harmonieuse, organisons des rencontres et ateliers pour faciliter les échanges, gérons la création juridique de la SCI et les règles de vie commune, et assurons un suivi continu pour résoudre tout désaccord et maintenir une communication fluide.",
+    },
+    {
+      question: "Comment assurer un bon fonctionnement entre copropriétaire",
+      answer: "Lors de la création de la SCI, un charte de copropriétaire est établie et signée par l'ensemble des parties. Cette charte permet de cadrer les objectifs, les droits et les devoirs de chacun.",
+    },
+    {
+      question: "Qui rédige les contrats et les documents juridiques ?",
+      answer: "Tous les documents (statuts, contrats, règles de vie commune) sont rédigés par des notaires, experts comptables ou avocats spécialisés, pour garantir leur conformité légale, leur clarté et leur équité. Cela vous assure une sécurité juridique totale et une confiance optimale dans votre projet.",
     },
     {
       question: "Comment fonctionne la SCI ?",
@@ -873,6 +881,7 @@ const HomePage = () => {
                         </a>
                       </div>
                     </div>
+                    {/*
                     <div className="flex items-start gap-4">
                       <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
                       <div>
@@ -887,6 +896,7 @@ const HomePage = () => {
                         <p className="text-foreground/80">Lundi - Vendredi, 9h - 18h</p>
                       </div>
                     </div>
+                    */}
                   </div>
                 </CardContent>
               </Card>
