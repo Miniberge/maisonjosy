@@ -203,7 +203,7 @@ const HomePage = () => {
       answer: "Oui, JOSY s’occupe de tout pour vous permettre de rejoindre une SCI en toute sérénité, même si vous ne connaissez pas les autres membres. Nous sélectionnons des profils aux attentes et modes de vie compatibles pour garantir une communauté harmonieuse, organisons des rencontres et ateliers pour faciliter les échanges, gérons la création juridique de la SCI et les règles de vie commune, et assurons un suivi continu pour résoudre tout désaccord et maintenir une communication fluide.",
     },
     {
-      question: "Comment assurer un bon fonctionnement entre copropriétaire",
+      question: "Comment assurer un bon fonctionnement entre copropriétaire ?",
       answer: "Lors de la création de la SCI, un charte de copropriétaire est établie et signée par l'ensemble des parties. Cette charte permet de cadrer les objectifs, les droits et les devoirs de chacun.",
     },
     {
@@ -223,7 +223,7 @@ const HomePage = () => {
       answer: "Oui, vos parts de SCI sont transmissibles à vos héritiers, comme tout bien immobilier. Cependant, si vous avez plusieurs enfants, leurs droits seront dilués (chaque enfant héritera d’une fraction de vos parts). Nous pouvons vous accompagner pour anticiper cette transmission et trouver des solutions adaptées (rachat par la SCI, etc.).",
     },
     {
-      question: "Quelles sont les charges mensuelles si je suis copropriétaire&nbsp?",
+      question: "Quelles sont les charges mensuelles si je suis copropriétaire\u00A0?",
       answer: "Les charges mensuelles varient selon les projets, mais prévoyez un budget compris entre 500 € et 700 € par mois. Cela couvre l’entretien des espaces communs, les charges (eau, électricité, internet, etc.), ainsi que la gestion administrative assurée par JOSY. Aucun loyer supplémentaire n’est à prévoir : ces charges incluent tout le nécessaire pour un cadre de vie optimal.",
     },
     {
@@ -599,7 +599,7 @@ const HomePage = () => {
                   <div className="text-3xl font-display font-bold text-primary mb-1">0 €</div>
                   <p className="text-foreground/70 text-sm">Investissement initial</p>
                   <div className="text-xl font-display font-bold text-primary mt-3 mb-1">
-                    ~1 500 €/mois
+                    ~1200 €/mois
                   </div>
                   <p className="text-foreground/70 text-sm">Loyer charges comprises</p>
                   <p className="text-muted-foreground text-xs mt-2">(si places disponibles)</p>
