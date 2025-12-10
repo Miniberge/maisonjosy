@@ -68,13 +68,12 @@ const InvestorForm = () => {
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
-              <Label htmlFor="prenom" className="text-base">Prénom *</Label>
+              <Label htmlFor="prenom" className="text-base">Prénom</Label>
               <Input
                 id="prenom"
                 value={formData.prenom}
                 onChange={(e) => handleChange("prenom", e.target.value)}
                 placeholder="Votre prénom"
-                required
                 className="h-12 text-base"
               />
             </div>
@@ -93,7 +92,7 @@ const InvestorForm = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
-              <Label htmlFor="telephone" className="text-base">Téléphone</Label>
+              <Label htmlFor="telephone" className="text-base">Téléphone *</Label>
               <Input
                 id="telephone"
                 type="tel"
@@ -104,7 +103,7 @@ const InvestorForm = () => {
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="email" className="text-base">Email</Label>
+              <Label htmlFor="email" className="text-base">Email *</Label>
               <Input
                 id="email"
                 type="email"
