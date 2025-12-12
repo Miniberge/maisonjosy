@@ -58,10 +58,10 @@ const InvestorForm = () => {
     <Card className="border-0 shadow-xl bg-card">
       <CardHeader className="text-center pb-2">
         <CardTitle className="font-display text-2xl md:text-3xl text-primary">
-          Devenir investisseur
+          Devenir copropriétaire
         </CardTitle>
         <p className="text-foreground/70 mt-2">
-          Remplissez ce formulaire et nous vous recontacterons pour discuter de votre projet d'investissement.
+          Remplissez ce formulaire et nous vous recontacterons pour discuter de votre projet.
         </p>
       </CardHeader>
       <CardContent className="pt-6">
