@@ -19,7 +19,7 @@ const Header = () => {
     { to: "#concept", label: "Concept" },
     { to: "#maisons", label: "Nos Maisons" },
     { to: "#tarifs", label: "Tarifs" },
-    { to: "#investisseurs", label: "Investisseurs" },
+    { to: "#investisseurs", label: "Copropriétaires" },
     { to: "#faq", label: "FAQ" },
   ];
 
