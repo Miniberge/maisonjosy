@@ -36,7 +36,15 @@ const InvestorForm = () => {
     }
 
     setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    try {
+      await fetch("https://eo9fyjp8t6izbng.m.pipedream.net", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
     toast({
       title: "Demande envoyée !",
@@ -51,6 +59,15 @@ const InvestorForm = () => {
       localisation: "",
       montant: "",
     });
+
+    } catch (error) {
+      toast({
+        title: "Erreur",
+        description: "Impossible d’envoyer la demande.",
+        variant: "destructive",
+      });
+    }
+
     setIsSubmitting(false);
   };
 
