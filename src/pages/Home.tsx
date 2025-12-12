@@ -128,7 +128,7 @@ const HomePage = () => {
 
   const stats = [
     { value: "4-10", label: "colocataires par habitat partagé" },
-    { value: "75-130k€", label: "investissement copropriétaire" },
+    { value: "75-150k€", label: "investissement copropriétaire" },
     { value: "0€", label: "de loyer pour les copropriétaires" },
   ];
 
@@ -142,7 +142,7 @@ const HomePage = () => {
 
   const sciSteps = [
     { number: "1", text: "Josy crée une SCI pour chaque maison" },
-    { number: "2", text: "Vous achetez des parts de la SCI (75 000 - 130 000 €)" },
+    { number: "2", text: "Vous achetez des parts de la SCI (75 000 - 150 000 €)" },
     { number: "3", text: "La SCI achète et rénove une maison selon les besoins des copropriétaires." },
     { number: "4", text: "Ces parts vous donnent droit à vos parties privatives + espaces communs" },
     { number: "5", text: "Vous pouvez emménager ou loger un de vos proche gratuitement." },
@@ -212,7 +212,7 @@ const HomePage = () => {
     },
     {
       question: "Comment fonctionne la SCI ?",
-      answer: "Vous achetez des parts dans une SCI pour un montant compris entre 75 000 € et 130 000 € selon les projets, ce qui vous donne droit à vos espaces privatifs, ainsi qu’à l’usage des espaces communs (cuisine, salon, jardin, etc.). Si vous ne souhaitez pas intégrer l’habitat immédiatement, JOSY se charge de trouver un locataire pour votre part, assurant ainsi la rentabilité de votre investissement dès le départ.",
+      answer: "Vous achetez des parts dans une SCI pour un montant compris entre 75 000 € et 150 000 € selon les projets, ce qui vous donne droit à vos espaces privatifs, ainsi qu’à l’usage des espaces communs (cuisine, salon, jardin, etc.). Si vous ne souhaitez pas intégrer l’habitat immédiatement, JOSY se charge de trouver un locataire pour votre part, assurant ainsi la rentabilité de votre investissement dès le départ.",
     },
     {
       question: "Puis-je revendre mes parts ?",
@@ -281,7 +281,7 @@ const HomePage = () => {
               className="text-lg px-8 py-6 bg-white/10 border-white text-white hover:bg-white hover:text-primary"
               onClick={() => scrollToSection("contact")}
             >
-              Être rappelé gratuitement
+              Devenir copropriétaire
             </Button>
           </div>
         </div>
@@ -419,7 +419,7 @@ const HomePage = () => {
               </div>
               <CardContent className="p-8 flex flex-col justify-center">
                 <div className="inline-block bg-accent text-white px-4 py-2 rounded-full text-sm font-semibold mb-4 w-fit">
-                  Ouverture fin 2026
+                  Projet en cours
                 </div>
                 <h3 className="font-display text-2xl font-semibold mb-4 text-primary">
                   Isère (38) - Saint Sauveur
@@ -557,7 +557,7 @@ const HomePage = () => {
                 </h3>
                 <div className="mb-6 text-center">
                   <div className="text-3xl font-display font-bold text-accent mb-1">
-                    75 000 - 130 000 €
+                    75 000 - 150 000 €
                   </div>
                   <p className="text-foreground/70 text-sm">Investissement initial</p>
                   <div className="text-xl font-display font-bold text-primary mt-3 mb-1">
@@ -718,7 +718,7 @@ const HomePage = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4 text-primary">
-              L'équipe
+              Qui suis-je ?
             </h2>
           </div>
           {/*<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">*/}
@@ -790,13 +790,12 @@ const HomePage = () => {
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <Label htmlFor="firstName">Prénom *</Label>
+                      <Label htmlFor="firstName">Prénom</Label>
                       <Input
                         id="firstName"
                         type="text"
                         value={formData.firstName}
                         onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                        required
                       />
                     </div>
                     <div>
@@ -811,12 +810,13 @@ const HomePage = () => {
                     </div>
                   </div>
                   <div>
-                    <Label htmlFor="email">Email</Label>
+                    <Label htmlFor="email">Email *</Label>
                     <Input
                       id="email"
                       type="email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        required
                     />
                   </div>
                   <div>
