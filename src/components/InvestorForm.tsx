@@ -38,7 +38,7 @@ const InvestorForm = () => {
     setIsSubmitting(true);
 
     try {
-      await fetch("https://eo9fyjp8t6izbng.m.pipedream.net", {
+      await fetch("https://n8n.bergeron.fr/webhook/5eb8f283-f0be-4164-8ede-a9da9bde7411", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
