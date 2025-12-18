@@ -47,7 +47,6 @@ import livingRoomImage from "@/assets/living-room.jpg";
 import gardenImage from "@/assets/garden-terrace.jpg";
 import quentinImage from "@/assets/team-quentin.jpg";
 import InvestorForm from "@/components/InvestorForm";
-import ContactForm from "@/components/ContactForm";
 
 const HomePage = () => {
   const [suggestedCity, setSuggestedCity] = useState("");
@@ -786,7 +785,6 @@ const HomePage = () => {
             {/* Formulaire */}
             <Card className="border-0 shadow-lg">
               <CardContent className="p-8">
-                <ContactForm />
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div>
                     <Label htmlFor="type">Vous êtes *</Label>
