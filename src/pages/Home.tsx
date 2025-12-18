@@ -80,7 +80,7 @@ const HomePage = () => {
   }
 
   try {
-    await fetch("https://n8n.bergeron.fr/webhook-test/5eb8f283-f0be-4164-8ede-a9da9bde7412", {
+    await fetch("https://n8n.bergeron.fr/webhook/5eb8f283-f0be-4164-8ede-a9da9bde7412", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
