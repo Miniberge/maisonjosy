@@ -47,6 +47,7 @@ import livingRoomImage from "@/assets/living-room.jpg";
 import gardenImage from "@/assets/garden-terrace.jpg";
 import quentinImage from "@/assets/team-quentin.jpg";
 import InvestorForm from "@/components/InvestorForm";
+import ContactForm from "@/components/ContactForm";
 
 const HomePage = () => {
   const [suggestedCity, setSuggestedCity] = useState("");
@@ -71,26 +72,40 @@ const HomePage = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.consent) {
-      toast.error("Veuillez accepter d'être recontacté");
-      return;
-    }
-    toast.success("Message envoyé !", {
-      description: "Nous vous recontacterons sous 24h.",
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  if (!formData.consent) {
+    toast.error("Veuillez accepter d'être recontacté");
+    return;
+  }
+
+  try {
+    await fetch("https://n8n.bergeron.fr/webhook-test/5eb8f283-f0be-4164-8ede-a9da9bde7412", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
     });
+
+    toast.success("Message envoyé !", {
+      description: "Nous vous recontacterons sous 48h.",
+    });
+
     setFormData({
       type: "",
       firstName: "",
       lastName: "",
       email: "",
       phone: "",
-      city: "",
       message: "",
       consent: false,
     });
-  };
+  } catch (error) {
+    toast.error("Erreur lors de l’envoi du message");
+  }
+};
 
   const solutions = [
     {
@@ -127,7 +142,7 @@ const HomePage = () => {
   ];
 
   const stats = [
-    { value: "4-10", label: "colocataires par habitat partagé" },
+    { value: "6-10", label: "colocataires par habitat partagé" },
     { value: "75-150k€", label: "investissement copropriétaire" },
     { value: "0€", label: "de loyer pour les copropriétaires" },
   ];
@@ -135,7 +150,7 @@ const HomePage = () => {
   const comparison = [
     { aspect: "Statut", ehpad: "Hébergé", residence: "Locataire", josy: "Copropriétaire", josyHighlight: true },
     { aspect: "Autonomie", ehpad: "Perte d'autonomie", residence: "Variable", josy: "Autonome", josyHighlight: true },
-    { aspect: "Taille", ehpad: "20-100 résidents", residence: "20-50 logements", josy: "8-10 colocataires", josyHighlight: true },
+    { aspect: "Taille", ehpad: "20-100 résidents", residence: "20-50 logements", josy: "6-10 colocataires", josyHighlight: true },
     { aspect: "Coût mensuel", ehpad: "2500-4000€", residence: "1500-2500€", josy: "Frais et charges uniquement", josyHighlight: true },
     { aspect: "Patrimoine", ehpad: "Non", residence: "Non", josy: "Oui (SCI)", josyHighlight: true },
   ];
@@ -599,7 +614,7 @@ const HomePage = () => {
                   <div className="text-3xl font-display font-bold text-primary mb-1">0 €</div>
                   <p className="text-foreground/70 text-sm">Investissement initial</p>
                   <div className="text-xl font-display font-bold text-primary mt-3 mb-1">
-                    ~1200 €/mois
+                    ~1500 €/mois
                   </div>
                   <p className="text-foreground/70 text-sm">Loyer charges comprises</p>
                   <p className="text-muted-foreground text-xs mt-2">(si places disponibles)</p>
@@ -771,6 +786,7 @@ const HomePage = () => {
             {/* Formulaire */}
             <Card className="border-0 shadow-lg">
               <CardContent className="p-8">
+                <ContactForm />
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div>
                     <Label htmlFor="type">Vous êtes *</Label>
